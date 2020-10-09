@@ -1,2 +1,1 @@
-# api-php
-Sample PHP API code 
+# api.ilkbyte.com için örnek PHP uygulaması
