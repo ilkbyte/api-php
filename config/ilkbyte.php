@@ -1,5 +1,5 @@
 <?php
     return [
-        'access_key' => env('ILKBYTE_ACCESSKEY'),
-        'secret_key' => env('ILKBYTE_SECRETKEY')
+        'access' => env('ILKBYTE_ACCESSKEY'),
+        'secret' => env('ILKBYTE_SECRETKEY')
     ];
