@@ -15,7 +15,7 @@ class Ilkbyte
      */
     public function __call($name, $arguments)
     {
-        if (is_null(config('ilkbyte.access_key')) || is_null(config('ilkbyte.secret_key'))) {
+        if (is_null(config('ilkbyte.access')) || is_null(config('ilkbyte.secret'))) {
             throw new \Exception('Ilkbyte package: Please provide accesskey and secretkey.');
         }
 
