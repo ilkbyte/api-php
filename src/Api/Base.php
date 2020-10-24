@@ -10,8 +10,8 @@ class Base {
         return new Client([
             'base_uri' => $this->url(),
             'query' => [
-                'access' => config('ilkbyte.access_key'),
-                'secret' => config('ilkbyte.secret_key'),
+                'access' => config('ilkbyte.access'),
+                'secret' => config('ilkbyte.secret'),
             ],
         ]);
     }
