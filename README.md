@@ -10,11 +10,15 @@ Package should be autodiscover by default but if you are using older versions of
 
 Add this in providers array;
 
-`Netinternet\Ilkbyte\IlkbyteServiceProvider::class,`
+```js
+Netinternet\Ilkbyte\IlkbyteServiceProvider::class,
+```
 
 Add this in aliases array;
 
-`'Ilkbyte' => Netinternet\Ilkbyte\Facades\Ilkbyte::class,`
+```js
+'Ilkbyte' => Netinternet\Ilkbyte\Facades\Ilkbyte::class,
+```
 
 #### **Configuration**
 
@@ -24,7 +28,7 @@ Use command below and choose ilkbyte option when asked. It will create ilkbyte.p
 
 You can also create this file manually and paste below content in file;
 
-```
+```php
 <?php
     return [
         'access' => env('ILKBYTE_ACCESSKEY'),
@@ -36,7 +40,7 @@ You can also create this file manually and paste below content in file;
 
 You can choose to use helper function
 
-```
+```php
 public function myMethod()
 {
 	return ilkbyte()->server()->list();
@@ -46,7 +50,7 @@ public function myMethod()
 
 ##### **Server**
 
-```
+```php
 // get all servers
 ilkbyte()->server()->list()
 // get only active servers
@@ -79,7 +83,7 @@ ilkbyte()->server('domain-name')->ipRdns('127.0.0.1', 'test.ni.net.tr')
 
 ##### **Domain**
 
-```
+```php
 // Get all domains
 ilkbyte()->domain()->all()
 // Create a new domain
