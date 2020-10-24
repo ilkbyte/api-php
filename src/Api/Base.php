@@ -18,7 +18,7 @@ class Base {
 
     public function url()
     {
-        return 'http://localhost:5000';
+        return 'https://api.ilkbyte.com/';
     }
 
     public function request($url = null, $query = [], $method = 'GET')
