@@ -68,17 +68,17 @@ ilkbyte()->server()->create([
 // Get server configs you can choose
 ilkbyte()->server()->getConfig()
 // Get server details
-ilkbyte()->server('domain-name')->show()
+ilkbyte()->server('server-name')->show()
 // Get monitoring data
-ilkbyte()->server('domain-name')->monitor()
+ilkbyte()->server('server-name')->monitor()
 // Server power settings
-ilkbyte()->server('domain-name')->power($status)
+ilkbyte()->server('server-name')->power($status)
 // Get all ips from server
-ilkbyte()->server('domain-name')->ip()
+ilkbyte()->server('server-name')->ip()
 // Get ip logs
-ilkbyte()->server('domain-name')->ipLogs()
+ilkbyte()->server('server-name')->ipLogs()
 // Add a new rdns record
-ilkbyte()->server('domain-name')->ipRdns('127.0.0.1', 'test.ni.net.tr')
+ilkbyte()->server('server-name')->ipRdns('127.0.0.1', 'test.ni.net.tr')
 ```
 
 ##### **Domain**
