@@ -4,7 +4,7 @@ This package mainly developed for laravel package but you can use as a standalon
 
 #### **Installation**
 
-`composer require netinternet/ilkbyte`
+`composer require ilkbyte/api-php`
 
 Package should be autodiscover by default but if you are using older versions of laravel you should change config/app.php with below;
 
@@ -38,12 +38,21 @@ You can also create this file manually and paste below content in file;
     
 #### **Usage**
 
-You can choose to use helper function
+You can choose to use facade or helper function. We will use helper functions for examples in this documentation.
+
+```php
+use Ilkbyte;
+// With Facade
+public function myMethod()
+{
+	return Ilkbyte::server()->all();
+}
+```
 
 ```php
 public function myMethod()
 {
-	return ilkbyte()->server()->list();
+	return ilkbyte()->server()->all();
 }
 ```
 #### **Avalaible Methods**
@@ -52,9 +61,9 @@ public function myMethod()
 
 ```php
 // get all servers
-ilkbyte()->server()->list()
+ilkbyte()->server()->all()
 // get only active servers
-ilkbyte()->server()->active
+ilkbyte()->server()->active()
 // create a new server
 ilkbyte()->server()->create([
     'username' => $username,
@@ -69,8 +78,6 @@ ilkbyte()->server()->create([
 ilkbyte()->server()->getConfig()
 // Get server details
 ilkbyte()->server('server-name')->show()
-// Get monitoring data
-ilkbyte()->server('server-name')->monitor()
 // Server power settings
 ilkbyte()->server('server-name')->power($status)
 // Get all ips from server
