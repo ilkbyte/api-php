@@ -94,7 +94,11 @@ ilkbyte()->server('server-name')->ipRdns('127.0.0.1', 'test.ni.net.tr')
 // Get all domains
 ilkbyte()->domain()->all()
 // Create a new domain
-ilkbyte()->domain()->create('domain-name')
+ilkbyte()->domain()->create([
+    'domain' => $domainName,
+    'server' => $serverName,
+    'ipv6' => $ipv6,
+])
 // Get domain details
 ilkbyte()->domain('domain-name')->show()
 // Add a new record
@@ -111,7 +115,9 @@ ilkbyte()->domain('domain-name')->update([
     'record_priority' => $recordPriority,
 ])
 // Delete domain
-ilkbyte()->domain('domain-name')->delete()
+ilkbyte()->domain('domain-name')->delete([
+    'record_id' => $recordId,
+])
 // Push changes to server
 ilkbyte()->domain('domain-name')->push()
 ```

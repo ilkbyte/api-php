@@ -30,15 +30,11 @@ class Domain extends Base
     /**
      * Create a new domain.
      *
-     * @param $domain
+     * @param $query
      * @return array|mixed
      */
-    public function create($domain)
+    public function create($query)
     {
-        $query = [
-            'domain' => $domain,
-        ];
-
         return $this->request('/domain/create', $query);
     }
 
@@ -79,9 +75,9 @@ class Domain extends Base
      *
      * @return array|mixed
      */
-    public function delete()
+    public function delete($query)
     {
-        return $this->request("/domain/manage/$this->domain/delete");
+        return $this->request("/domain/manage/$this->domain/delete", $query);
     }
 
     /**
