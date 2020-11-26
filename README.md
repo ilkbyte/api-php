@@ -117,7 +117,7 @@ ilkbyte()->server('server-name')->snapshotDelete('snapshot-name')
 // Add cron to your snapshot.
 ilkbyte()->server('server-name')->snapshotAddCron($snapshotName, $day, $hour, $minute)
 // Delete cron.
-ilkbyte()->snapshot('server-name')->snapshotDeleteCron('snapshot-name')
+ilkbyte()->server('server-name')->snapshotDeleteCron('snapshot-name')
 ```
 
 ##### **Domain**
