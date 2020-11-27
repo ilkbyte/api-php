@@ -57,6 +57,14 @@ public function myMethod()
 ```
 #### **Avalaible Methods**
 
+##### **Account**
+```php
+// get account info
+ilkbyte()->account()->info()
+// get your account users.
+ilkbyte()->account()->users()
+```
+
 ##### **Server**
 
 ```php
@@ -85,7 +93,31 @@ ilkbyte()->server('server-name')->ip()
 // Get ip logs
 ilkbyte()->server('server-name')->ipLogs()
 // Add a new rdns record
-ilkbyte()->server('server-name')->ipRdns('127.0.0.1', 'test.ni.net.tr')
+ilkbyte()->server('server-name')->ipRdns($ip, $rdns)
+```
+##### **Backup**
+```php
+// Get backup list.
+ilkbyte()->server('server-name')->backupList()
+// Restore your backup.
+ilkbyte()->server('server-name')->backupRestore('backup-name')
+```
+##### **Snapshot**
+```php
+// Get all snapshots.
+ilkbyte()->server('server-name')->snapshotList()
+// Create a new snapshot.
+ilkbyte()->server('server-name')->snapshotCreate('snapshot-name')
+// Revert snapshot.
+ilkbyte()->server('server-name')->snapshotRevert('snapshot-name')
+// Recreate your snapshot.
+ilkbyte()->server('server-name')->snapshotUpdate('snapshot-name')
+// Delete snapshot.
+ilkbyte()->server('server-name')->snapshotDelete('snapshot-name')
+// Add cron to your snapshot.
+ilkbyte()->server('server-name')->snapshotAddCron($snapshotName, $day, $hour, $minute)
+// Delete cron.
+ilkbyte()->server('server-name')->snapshotDeleteCron('snapshot-name')
 ```
 
 ##### **Domain**
